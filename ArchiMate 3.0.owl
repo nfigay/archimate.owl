@@ -181,8 +181,8 @@ The access relationship models the ability of behavior and active structure elem
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AssociatedTo">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
-        <rdfs:comment xml:lang="en">An association relationship models an unspecified relationship, or one that is not represented by another ArchiMate relationship.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
     </owl:ObjectProperty>
     
 
@@ -322,6 +322,15 @@ The serving relationship models that an element provides its functionality to an
     
 
 
+    <!-- http://www.plminterop.org/archimate/TestPropertyForPunning -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/TestPropertyForPunning">
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.plminterop.org/archimate/Triggers -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggers">
@@ -455,6 +464,18 @@ The serving relationship models that an element provides its functionality to an
     
 
 
+    <!-- http://www.plminterop.org/archimate/ArchiMateModelingEntity -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/ArchiMateModelingRelation -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    
+
+
     <!-- http://www.plminterop.org/archimate/Artifact -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Artifact">
@@ -465,7 +486,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Assessment -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Assessment"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Assessment">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -519,7 +542,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Business_Object -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Object"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Object">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -549,7 +574,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Capability -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Capability"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Capability">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -563,31 +590,41 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Constraint -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Constraint"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Constraint">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Contract -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Contract"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Contract">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Course_of_Action -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Course_of_Action"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Course_of_Action">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Data_Object -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Data_Object"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Data_Object">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Deliverable -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Deliverable"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Deliverable">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -609,7 +646,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Driver -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Driver"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Driver">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -631,13 +670,17 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Gap -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Gap"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Gap">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Goal -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Goal"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Goal">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -659,7 +702,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Junction -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Junction"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Junction">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -673,13 +718,17 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Material -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Material"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Material">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Meaning -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Meaning"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Meaning">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -693,7 +742,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Outcome -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Outcome"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Outcome">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -707,43 +758,57 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Plateau -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Plateau"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Plateau">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Principle -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Principle"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Principle">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Product -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Product"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Product">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Representation -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Representation"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Representation">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Requirement -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Requirement"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Requirement">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Resource -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Resource"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Resource">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
     <!-- http://www.plminterop.org/archimate/Stakeholder -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Stakeholder"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Stakeholder">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -813,7 +878,9 @@ The serving relationship models that an element provides its functionality to an
 
     <!-- http://www.plminterop.org/archimate/Value -->
 
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Value"/>
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Value">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:Class>
     
 
 
@@ -836,6 +903,47 @@ The serving relationship models that an element provides its functionality to an
     
 
 
+    <!-- http://www.plminterop.org/archimate/Assessment -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Assessment">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/AssociatedTo -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/AssociatedTo">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/TestPropertyForPunning -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/TestPropertyForPunning">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/assessement_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/assessement_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/assessment_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/assessment_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
+        <AssociatedTo rdf:resource="http://www.plminterop.org/archimate/assessement_001"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.plminterop.org/archimate/business_event_001 -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_event_001">
@@ -850,6 +958,23 @@ The serving relationship models that an element provides its functionality to an
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_object_001">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Assessment">
+        <rdfs:comment>Punned element</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/TestPropertyForPunning">
+        <rdfs:comment>punned element (object property and individual)</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
