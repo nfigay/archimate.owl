@@ -43,9 +43,6 @@ If there is a triggering relationship from element a to element b, and a trigger
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/inverse_of_access"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
-        <rdfs:comment xml:lang="en">The access relationship represents a data dependency, denoted by a dashed line.
-The access relationship models the ability of behavior and active structure elements to observe or act upon passive structure elements.</rdfs:comment>
-        <rdfs:label>Accesses</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -137,7 +134,6 @@ The access relationship models the ability of behavior and active structure elem
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/Composition"/>
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/Aggregation"/>
         </owl:propertyChainAxiom>
-        <rdfs:label>Aggregates</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -167,7 +163,6 @@ The access relationship models the ability of behavior and active structure elem
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/Composition"/>
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/Assignment"/>
         </owl:propertyChainAxiom>
-        <rdfs:label>Assigned to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -187,7 +182,6 @@ The access relationship models the ability of behavior and active structure elem
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Association">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
     </owl:ObjectProperty>
@@ -199,7 +193,6 @@ The access relationship models the ability of behavior and active structure elem
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Composition">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_composition"/>
-        <rdfs:label>Composed of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -226,8 +219,6 @@ elements</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_flow"/>
-        <rdfs:comment xml:lang="en">The flow relationship represents transfer from one element to another.</rdfs:comment>
-        <rdfs:label>Flows to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -251,9 +242,6 @@ elements</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_Influence"/>
-        <rdfs:comment xml:lang="en">The influence relationship is the weakest type of dependency, used to model how motivation elements are influenced by other elements.
-The influence relationship models that an element affects the implementation or achievement of some motivation element.Attributes can be used to indicate the sign and/or strength of the influence. The choice of possible attribute values is left to the modeler; e.g., {++, +, 0, -, --} or [0..10]. By default, the influence relationship models a contribution with unspecified sign and strength.</rdfs:comment>
-        <rdfs:label>Influences</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -281,7 +269,6 @@ The influence relationship models that an element affects the implementation or 
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <rdfs:label>Influenced by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -291,7 +278,6 @@ The influence relationship models that an element affects the implementation or 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Realization"/>
-        <rdfs:label>Realized by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -300,7 +286,6 @@ The influence relationship models that an element affects the implementation or 
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <rdfs:label>Aggregated by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -309,7 +294,6 @@ The influence relationship models that an element affects the implementation or 
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <rdfs:label>Assigned from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -318,7 +302,6 @@ The influence relationship models that an element affects the implementation or 
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <rdfs:label>Composes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -327,7 +310,6 @@ The influence relationship models that an element affects the implementation or 
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
-        <rdfs:label>Flows from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -337,7 +319,6 @@ The influence relationship models that an element affects the implementation or 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Serving"/>
-        <rdfs:label>Served by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -347,7 +328,6 @@ The influence relationship models that an element affects the implementation or 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Specialization"/>
-        <rdfs:label>Specializes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -357,7 +337,7 @@ The influence relationship models that an element affects the implementation or 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
-        <rdfs:label>Triggered by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -375,6 +355,7 @@ The influence relationship models that an element affects the implementation or 
     <!-- http://www.plminterop.org/archimate/OtherRelationship -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/OtherRelationship">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Other relationships, which do not fall into one of the above categories</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -384,7 +365,6 @@ The influence relationship models that an element affects the implementation or 
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <rdfs:label>Realizes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -392,11 +372,7 @@ The influence relationship models that an element affects the implementation or 
     <!-- http://www.plminterop.org/archimate/Serving -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving">
-        <owl:equivalentProperty rdf:resource="http://www.plminterop.org/archimate/Used_by"/>
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <rdfs:comment xml:lang="en">The serving relationship represents a control dependency, denoted by a solid line.
-The serving relationship models that an element provides its functionality to another element.</rdfs:comment>
-        <rdfs:label>Serves</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -418,8 +394,6 @@ The serving relationship models that an element provides its functionality to an
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
-        <rdfs:comment xml:lang="en">The specialization relationship indicates that an element is a particular kind of another element.</rdfs:comment>
-        <rdfs:label>Specializion of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -432,22 +406,11 @@ The serving relationship models that an element provides its functionality to an
     
 
 
-    <!-- http://www.plminterop.org/archimate/TestPropertyForPunning -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/TestPropertyForPunning">
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Triggering -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">The triggering relationship describes a temporal or causal relationship between elements.</rdfs:comment>
-        <rdfs:label>Triggers</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -462,11 +425,21 @@ The serving relationship models that an element provides its functionality to an
     
 
 
+    <!-- http://www.plminterop.org/archimate/inverse_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/inverse_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.plminterop.org/archimate/inverse_of_access -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/inverse_of_access">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <rdfs:label>Accessed by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1025,10 +998,34 @@ The serving relationship models that an element provides its functionality to an
     
 
 
+    <!-- http://www.plminterop.org/archimate/Access -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Access">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Aggregation -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Aggregation">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.plminterop.org/archimate/Assessment -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Assessment">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Assignment -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Assignment">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
     </owl:NamedIndividual>
     
 
@@ -1041,9 +1038,138 @@ The serving relationship models that an element provides its functionality to an
     
 
 
-    <!-- http://www.plminterop.org/archimate/TestPropertyForPunning -->
+    <!-- http://www.plminterop.org/archimate/Composition -->
 
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/TestPropertyForPunning">
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Composition">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Flow -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Flow">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Influence -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Influence">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_Influence -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Influence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_Realization -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Realization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_aggregation -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_assignment -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Assignment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_composition -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Composition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_flow -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Flow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_serving -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Serving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_specialization -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Specialization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_triggering -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Realization -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Realization">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Serving -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Serving">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Specialization -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Specialization">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Triggering">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
     </owl:NamedIndividual>
     
@@ -1083,6 +1209,15 @@ The serving relationship models that an element provides its functionality to an
     
 
 
+    <!-- http://www.plminterop.org/archimate/inverse_of_access -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/inverse_of_access">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Access"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1091,14 +1226,80 @@ The serving relationship models that an element provides its functionality to an
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Access">
+        <rdfs:label>Accesses</rdfs:label>
+        <rdfs:comment xml:lang="en">The access relationship represents a data dependency, denoted by a dashed line.
+The access relationship models the ability of behavior and active structure elements to observe or act upon passive structure elements.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Aggregation">
+        <rdfs:label>Aggregates</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/Assessment">
         <rdfs:comment>Punned element</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Assignment">
+        <rdfs:label>Assigned to</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/Association">
         <rdfs:label>Associated to</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/TestPropertyForPunning">
-        <rdfs:comment>punned element (object property and individual)</rdfs:comment>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Composition">
+        <rdfs:label>Composed of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Flow">
+        <rdfs:comment xml:lang="en">The flow relationship represents transfer from one element to another.</rdfs:comment>
+        <rdfs:label>Flows to</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Influence">
+        <rdfs:comment xml:lang="en">The influence relationship is the weakest type of dependency, used to model how motivation elements are influenced by other elements.
+The influence relationship models that an element affects the implementation or achievement of some motivation element.Attributes can be used to indicate the sign and/or strength of the influence. The choice of possible attribute values is left to the modeler; e.g., {++, +, 0, -, --} or [0..10]. By default, the influence relationship models a contribution with unspecified sign and strength.</rdfs:comment>
+        <rdfs:label>Influences</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
+        <rdfs:label>Influenced by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
+        <rdfs:label>Realized by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
+        <rdfs:label>Aggregated by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
+        <rdfs:label>Assigned from</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
+        <rdfs:label>Composed by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
+        <rdfs:label>Flows from</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
+        <rdfs:label>Served by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
+        <rdfs:label>Specializes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
+        <rdfs:label>Triggered by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Realization">
+        <rdfs:label>Realizes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Serving">
+        <rdfs:comment xml:lang="en">The serving relationship represents a control dependency, denoted by a solid line.
+The serving relationship models that an element provides its functionality to another element.</rdfs:comment>
+        <rdfs:label>Serves</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Specialization">
+        <rdfs:comment xml:lang="en">The specialization relationship indicates that an element is a particular kind of another element.</rdfs:comment>
+        <rdfs:label>Specializion of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Triggering">
+        <rdfs:comment xml:lang="en">The triggering relationship describes a temporal or causal relationship between elements.</rdfs:comment>
+        <rdfs:label>Triggers</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_access">
+        <rdfs:label>Accessed by</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
