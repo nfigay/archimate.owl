@@ -182,6 +182,7 @@ If there is a triggering relationship from element a to element b, and a trigger
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Association">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_association"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
     </owl:ObjectProperty>
@@ -223,16 +224,72 @@ elements</rdfs:comment>
     
 
 
-    <!-- http://www.plminterop.org/archimate/Flow_relation_from_resource -->
+    <!-- http://www.plminterop.org/archimate/Flow_relation_from_source_type1 -->
 
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_resource">
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_source_type1">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Flow"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Flow_relation_from_source_type2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_source_type2">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Flow"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Facility"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Location"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Node"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Path"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Product"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/System_Software"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Flow_relation_from_source_type3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_source_type3">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Flow"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
     </owl:ObjectProperty>
     
 
@@ -246,16 +303,50 @@ elements</rdfs:comment>
     
 
 
-    <!-- http://www.plminterop.org/archimate/Influence_relation_from_Resource -->
+    <!-- http://www.plminterop.org/archimate/Influence_relation_from_Stakeholder -->
 
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_Resource">
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_Stakeholder">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Influence"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Influence_relation_from_influencer_type1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_influencer_type1">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Influence"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Driver"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Influence_relation_from_influencer_type2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_influencer_type2">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Influence"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Driver"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
@@ -294,6 +385,14 @@ elements</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Inverse_of_association -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_association">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
     </owl:ObjectProperty>
     
 
@@ -377,15 +476,108 @@ elements</rdfs:comment>
     
 
 
-    <!-- http://www.plminterop.org/archimate/Serving_relation_from_resource -->
+    <!-- http://www.plminterop.org/archimate/Serving_relation_from_courseOfAction -->
 
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_resource">
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_courseOfAction">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Serving"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Serving_relation_from_serving_type1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_serving_type1">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Serving"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Facility"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Node"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/System_Software"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Serving_relation_from_serving_type2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_serving_type2">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Serving"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Serving_relation_from_serving_type3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_serving_type3">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Serving"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Facility"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Node"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/System_Software"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
     </owl:ObjectProperty>
     
 
@@ -411,6 +603,50 @@ elements</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type1">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type2">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type3">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type4">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
     </owl:ObjectProperty>
     
 
@@ -421,17 +657,6 @@ elements</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
         <rdfs:comment xml:lang="en">Compared to the earlier versions of this standard, the name of this relationship has been changed from ‘used by’ to ‘serving’, to better reflect its direction with an active verb: a service serves a user. The meaning of the relationship has not been altered. The ‘used by’ designation is still allowed but deprecated, and will be removed in a future version of the standard.</rdfs:comment>
         <rdfs:label>Is used</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/inverse_of -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/inverse_of">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
     </owl:ObjectProperty>
     
 
@@ -499,6 +724,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Collaboration">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -507,6 +737,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Component">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -515,6 +750,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Event">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -523,6 +761,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Function">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -531,6 +774,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Interaction">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -539,6 +787,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Interface">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
     </owl:Class>
     
 
@@ -547,6 +799,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Process">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -555,6 +812,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Application_Service">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -575,6 +837,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Artifact">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
     </owl:Class>
     
 
@@ -583,6 +848,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Assessment">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -591,6 +857,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Actor">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -599,6 +870,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Collaboration">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -607,6 +883,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Event">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -615,6 +895,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Function">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -623,6 +908,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Interaction">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -631,6 +921,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Interface">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -639,6 +934,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Object">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -647,6 +943,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Process">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -655,6 +956,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Role">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -663,6 +969,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Business_Service">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -671,6 +982,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Capability">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
     </owl:Class>
     
 
@@ -679,6 +993,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Communication_Network">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -687,6 +1006,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Constraint">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -695,6 +1015,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Contract">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -703,6 +1024,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Course_of_Action">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
     </owl:Class>
     
 
@@ -711,6 +1035,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Data_Object">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -719,6 +1044,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Deliverable">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -727,6 +1053,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Device">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -735,6 +1065,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Distribution_Network">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -743,6 +1078,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Driver">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -751,6 +1087,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Equipment">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -759,6 +1100,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Facility">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -775,6 +1121,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Goal">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -783,6 +1130,15 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Grouping">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
     </owl:Class>
     
 
@@ -791,7 +1147,23 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Implementation_Event">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Influencer_Type1 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Influencer_Type1"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Influencer_Type2 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Influencer_Type2"/>
     
 
 
@@ -799,6 +1171,14 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Junction">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
     </owl:Class>
     
 
@@ -807,6 +1187,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Location">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -815,6 +1199,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Material">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -823,6 +1208,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Meaning">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -831,6 +1217,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Node">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -839,6 +1230,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Outcome">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -847,6 +1239,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Path">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -855,6 +1252,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Plateau">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
     </owl:Class>
     
 
@@ -863,6 +1263,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Principle">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -871,6 +1272,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Product">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
     </owl:Class>
     
 
@@ -879,6 +1283,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Representation">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -887,6 +1292,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Requirement">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -895,7 +1301,34 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Resource">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Serving_Type1 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Serving_Type1"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Source_Type1 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Source_Type1"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Source_Type2 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Source_Type2"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Source_Type3 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Source_Type3"/>
     
 
 
@@ -911,6 +1344,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/System_Software">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -919,6 +1356,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Collaboration">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -927,6 +1369,9 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Event">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -935,6 +1380,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Function">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -943,6 +1393,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Interaction">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -951,6 +1406,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Interface">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
     </owl:Class>
     
 
@@ -959,6 +1418,11 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Process">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
     
 
@@ -967,7 +1431,36 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Service">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_Type1 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Triggering_Type1"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_Type2 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Triggering_Type2"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_Type3 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Triggering_Type3"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Triggering_Type4 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Triggering_Type4"/>
     
 
 
@@ -975,6 +1468,7 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Value">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
     </owl:Class>
     
 
@@ -983,6 +1477,10 @@ elements</rdfs:comment>
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Work_Package">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
     </owl:Class>
     
 
@@ -1066,7 +1564,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Influence"/>
     </owl:NamedIndividual>
     
 
@@ -1075,7 +1572,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Realization"/>
     </owl:NamedIndividual>
     
 
@@ -1084,7 +1580,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
     </owl:NamedIndividual>
     
 
@@ -1093,7 +1588,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Assignment"/>
     </owl:NamedIndividual>
     
 
@@ -1102,7 +1596,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Composition"/>
     </owl:NamedIndividual>
     
 
@@ -1111,7 +1604,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Flow"/>
     </owl:NamedIndividual>
     
 
@@ -1120,7 +1612,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Serving"/>
     </owl:NamedIndividual>
     
 
@@ -1129,7 +1620,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Specialization"/>
     </owl:NamedIndividual>
     
 
@@ -1138,7 +1628,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Triggering"/>
     </owl:NamedIndividual>
     
 
@@ -1213,7 +1702,6 @@ elements</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/inverse_of_access">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-        <inverse_of rdf:resource="http://www.plminterop.org/archimate/Access"/>
     </owl:NamedIndividual>
     
 
@@ -1241,7 +1729,7 @@ The access relationship models the ability of behavior and active structure elem
         <rdfs:label>Assigned to</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/Association">
-        <rdfs:label>Associated to</rdfs:label>
+        <rdfs:label>Associated from</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/Composition">
         <rdfs:label>Composed of</rdfs:label>
