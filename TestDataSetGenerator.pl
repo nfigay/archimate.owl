@@ -3,11 +3,76 @@
 
 @ArchiMateModelingRelations=("Access", "Influence", "Serving", "Flow", "Triggering", "Association", "Specialization", "Aggregation", "Assignment", "Composition", "Realization");
 open(DATA, ">TestDataSet.txt") or die "Couldn't open file TestDataSet.txt, $!";
-foreach (@ArchiMateModelingEntities) {
-print DATA "$_\n";
-}
-close DATA;
+@n=("001", "002", "003");
 
+for my $i (0.. $#ArchiMateModelingEntities) {
+
+   for my $j (0.. $#n){
+print DATA "$Entity\n", '<!-- http://www.plminterop.org/archimate/' , $ArchiMateModelingEntities[$i] , '_G', $n[$j],"  -->\n\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',
+$ArchiMateModelingEntities[$i] , '_G', $n[$j], '">',"\n",
+'   <rdf:type rdf:resource="http://www.plminterop.org/archimate/',
+$ArchiMateModelingEntities[$i] ,'"','/','>',"\n",
+'</owl:NamedIndividual>' , "\n\n" ;   
+
+};};
+
+for my $i (0.. $#ArchiMateModelingRelations) {
+   for my $j (0.. $#ArchiMateModelingEntities) {
+print DATA   
+   
+"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_AB",$j, "-->",
+"\n","\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_AB',$j,'">',"\n",
+'      <rdf:type rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'"/>',
+"\n",
+ "      <SourceRelationshipFor",  $ArchiMateModelingEntities[$j], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_001"/>',
+ "\n",
+'      <TargetRelationshipFor', Composition,'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_002"/>',
+"\n",
+'</owl:NamedIndividual>',
+"\n","\n","\n"
+;    
+};}; 
+
+for my $i (0.. $#ArchiMateModelingRelations) {
+   for my $j (0.. $#ArchiMateModelingEntities) {
+print DATA   
+   
+"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_BC",$j,
+"-->",
+"\n","\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_BC',$j,'">',"\n",
+'      <rdf:type rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'"/>',
+"\n",
+ "      <SourceRelationshipFor",  $ArchiMateModelingEntities[$j], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_002"/>',
+ "\n",
+'      <TargetRelationshipFor', Composition,'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_003"/>',
+"\n",
+'</owl:NamedIndividual>',
+"\n","\n","\n"
+;    
+};};  
+
+for my $i (0.. $#ArchiMateModelingRelations) {
+   for my $j (0.. $#ArchiMateModelingEntities) {
+print DATA   
+   
+"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_AA",$j, "-->",
+"\n","\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_AA',$j,'">',"\n",
+'      <rdf:type rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'"/>',
+"\n",
+ "      <SourceRelationshipFor",  $ArchiMateModelingEntities[$j], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_001"/>',
+ "\n",
+'      <TargetRelationshipFor', Composition,'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_001"/>',
+"\n",
+'</owl:NamedIndividual>',
+"\n","\n","\n"
+;    
+};};  
+
+close DATA;
 
 # This will print "Hello, World"
 print "Hello, world\n";
