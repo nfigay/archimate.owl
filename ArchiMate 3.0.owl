@@ -72,7 +72,6 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AccessR">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/inverse_of_access"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAccess"/>
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAccess"/>
@@ -91,6 +90,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Contract"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Material"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Representation"/>
     </owl:ObjectProperty>
@@ -102,10 +102,17 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_accessor_type2">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Accessor_Type2"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Contract"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Representation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Business_Object"/>
+                    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Contract"/>
+                    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Grouping"/>
+                    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Junction"/>
+                    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Representation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -117,6 +124,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Accessor_Type3"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
     </owl:ObjectProperty>
     
 
@@ -1068,6 +1076,109 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForRealization"/>
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForRealization"/>
         </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Realization_relation_from_applicationInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_applicationInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Realization_relation_from_product -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_product">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Product"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Facility"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/System_Software"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Realization_relation_from_realization_type1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_realization_type1">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Realization_relation_from_realization_type2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_realization_type2">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Realization_Type2"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
     </owl:ObjectProperty>
     
 
@@ -2364,14 +2475,43 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Access">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/AccessRelationship -->
-
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/AccessRelationship">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.plminterop.org/archimate/TargetRelationshipForAccess"/>
+                                <owl:someValuesFrom rdf:resource="http://www.plminterop.org/archimate/Location"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAccess"/>
+                                <owl:someValuesFrom rdf:resource="http://www.plminterop.org/archimate/Accessor_Type2"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.plminterop.org/archimate/TargetRelationshipForAccess"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.plminterop.org/archimate/Equipment"/>
+                                            <rdf:Description rdf:about="http://www.plminterop.org/archimate/Location"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAccess"/>
+                                <owl:someValuesFrom rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2412,7 +2552,7 @@ The inter-relationships of components in the Technology Layer are mainly formed 
     <!-- http://www.plminterop.org/archimate/Aggregation -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Aggregation">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Composition"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
     </owl:Class>
     
 
@@ -2429,6 +2569,7 @@ The inter-relationships of components in the Technology Layer are mainly formed 
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/ApplicationElement">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:comment xml:lang="en">The Application Layer is typically used to model the information systems architectures of the enterprise, including the application architecture that, as defined by the TOGAF framework [4], describes the structure and interaction of the applications.</rdfs:comment>
     </owl:Class>
     
@@ -2441,6 +2582,7 @@ The inter-relationships of components in the Technology Layer are mainly formed 
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ApplicationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Collaboration"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
@@ -2459,6 +2601,7 @@ Application collaboration is a specialization of component, and aggregates two o
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ApplicationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/InternalActiveStructureElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
@@ -2576,6 +2719,12 @@ A purpose may be associated with an application service. An application service 
     <!-- http://www.plminterop.org/archimate/ArchiMateModelingRelation -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/ArchiMateRule -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/ArchiMateRule"/>
     
 
 
@@ -2709,6 +2858,7 @@ An application interaction is the behavior of a collaboration of two or more app
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/BusinessElement">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
     </owl:Class>
     
 
@@ -3054,6 +3204,7 @@ An application function or process can operate on data objects. A data object ma
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Deliverable">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ImplementationMigrationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:comment xml:lang="en">A deliverable represents a precisely-defined outcome of a work package.</rdfs:comment>
         <rdfs:comment xml:lang="en">Often, deliverables are contractually specified and in turn formally reviewed, agreed, and signed off by the stakeholders as is, for example, prescribed by the TOGAF framework</rdfs:comment>
         <rdfs:comment xml:lang="en">Work packages produce deliverables. These may be results of any kind; e.g., reports, papers, services, software, physical products, etc., or intangible results such as organizational change. A deliverable may also be the implementation of (a part of) an architecture.</rdfs:comment>
@@ -3072,7 +3223,7 @@ An application function or process can operate on data objects. A data object ma
     <!-- http://www.plminterop.org/archimate/Derivation_Rule -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Derivation_Rule">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Rule"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateRule"/>
     </owl:Class>
     
 
@@ -3135,7 +3286,6 @@ Different icons may be used to distinguish between different types of devices; e
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Distribution_Network">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
@@ -3184,7 +3334,6 @@ The profile may also define a specific notation to denote the specialization. Th
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Equipment">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Node"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
@@ -3229,7 +3378,6 @@ The profile may also define a specific notation to denote the specialization. Th
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Facility">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Node"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
@@ -3255,7 +3403,7 @@ The name of a facility should preferably be a noun referring to the type of faci
     <!-- http://www.plminterop.org/archimate/Function -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Function">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/BehaviourElement"/>
         <rdfs:comment xml:lang="en">A function represents a collection of behavior based on specific criteria, such as required resources, competences, or location.</rdfs:comment>
     </owl:Class>
     
@@ -3264,7 +3412,6 @@ The name of a facility should preferably be a noun referring to the type of faci
     <!-- http://www.plminterop.org/archimate/Gap -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Gap">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ImplementationMigrationElement"/>
         <rdfs:comment xml:lang="en">A gap represents a statement of difference between two plateaus.</rdfs:comment>
         <rdfs:comment xml:lang="en">he gap element is associated with two plateaus (e.g., Baseline and Target Architectures, or two subsequent Transition Architectures), and represents the differences between these plateaus.
@@ -3276,7 +3423,6 @@ In the TOGAF framework [4], a gap is an important outcome of a gap analysis in P
     <!-- http://www.plminterop.org/archimate/Goal -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Goal">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/MotivationElement"/>
         <rdfs:comment xml:lang="en">A goal represents a high-level statement of intent, direction, or desired end state for an organization and its stakeholders.</rdfs:comment>
@@ -3323,6 +3469,7 @@ Another useful application of grouping is for modeling domains. For example, the
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Event"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ImplementationMigrationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
         <rdfs:comment xml:lang="en">An implementation event is a behavior element that denotes a state change related to implementation or migration.</rdfs:comment>
@@ -3423,7 +3570,6 @@ The relationships that can be used in combination with a junction are all the dy
     <!-- http://www.plminterop.org/archimate/Material -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Material">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/TechnologyPhysicalElement"/>
         <rdfs:comment xml:lang="en">Material represents tangible physical matter or physical elements.</rdfs:comment>
@@ -3514,7 +3660,6 @@ Artifacts deployed on a node may either be drawn inside the node or connected to
     <!-- http://www.plminterop.org/archimate/Outcome -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Outcome">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/MotivationElement"/>
         <rdfs:comment xml:lang="en">An outcome represents an end result that has been achieved.</rdfs:comment>
@@ -3564,10 +3709,10 @@ A path connects two or more nodes. A path is realized by one or more networks. A
     <!-- http://www.plminterop.org/archimate/Plateau -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Plateau">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ImplementationMigrationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
         <rdfs:comment xml:lang="en">A plateau represents a relatively stable state of the architecture that exists during a limited period of time.</rdfs:comment>
         <rdfs:comment xml:lang="en">An important premise in the TOGAF framework is that the various architectures are described for different stages in time. In each of the Phases B, C, and D of the ADM, a Baseline Architecture and Target Architecture are created, describing the current situation and the desired future situation. In Phase E (Opportunities and Solutions), so-called Transition Architectures are defined, showing the enterprise at incremental states reflecting periods of transition between the Baseline and Target Architectures. Transition Architectures are used to allow for individual work packages and projects to be grouped into managed portfolios and programs, illustrating the business value at each stage.
@@ -3588,7 +3733,6 @@ In order to support this, the plateau element is defined.</rdfs:comment>
     <!-- http://www.plminterop.org/archimate/Principle -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Principle">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/MotivationElement"/>
         <rdfs:comment xml:lang="en">A principle represents a qualitative statement of intent that should be met by the architecture.</rdfs:comment>
@@ -3651,6 +3795,18 @@ A value may be associated with a product. The name of a product is usually the n
     
 
 
+    <!-- http://www.plminterop.org/archimate/Realization_Type1 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Realization_Type1"/>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Realization_Type2 -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Realization_Type2"/>
+    
+
+
     <!-- http://www.plminterop.org/archimate/RelationshipConnector -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/RelationshipConnector">
@@ -3675,7 +3831,6 @@ A meaning can be associated with a representation that carries this meaning. The
     <!-- http://www.plminterop.org/archimate/Requirement -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Requirement">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/MotivationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
@@ -3704,12 +3859,6 @@ The former requirement can be realized by a human actor and the latter by a soft
         <rdfs:comment xml:lang="en">Resources are a central concept in the field of strategic management, economics, computer science, portfolio management, and more. They are often considered, together with capabilities, to be sources of competitive advantage for organizations. Resources are analyzed in terms of strengths and weaknesses, and they are considered when implementing strategies. Due to resources being limited, they can often be a deciding factor for choosing which strategy, goal, and project to implement and in which order. Resources can be classified into tangible assets – financial assets (e.g., cash, securities, borrowing capacity), physical assets (e.g., plant, equipment, land, mineral reserves), intangible assets (technology; e.g., patents, copyrights, trade secrets; reputation; e.g., brand, relationships; culture), and human assets (skills/know-how, capacity for communication and collaboration, motivation).
 Resources are realized by active and passive structure elements. The name of a resource should preferably be a noun.</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Rule -->
-
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/Rule"/>
     
 
 
@@ -3757,7 +3906,6 @@ Resources are realized by active and passive structure elements. The name of a r
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/Stakeholder">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ActiveStructureElement"/>
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/MotivationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ViewpointElement"/>
         <rdfs:comment xml:lang="en">A stakeholder is the role of an individual, team, or organization (or classes thereof) that represents their interests in the outcome of the architecture.</rdfs:comment>
@@ -3778,6 +3926,7 @@ Resources are realized by active and passive structure elements. The name of a r
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/StrategyElement">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
     </owl:Class>
     
 
@@ -3812,9 +3961,9 @@ Resources are realized by active and passive structure elements. The name of a r
     <owl:Class rdf:about="http://www.plminterop.org/archimate/System_Software">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/InternalActiveStructureElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/PhysicalElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/TechnologyPhysicalElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
         <rdfs:comment xml:lang="en">System software is a specialization of a node that is used to model the software environment in which artifacts run. This can be, for example, an operating system, a JEE application server, a database system, or a workflow engine. Also, system software can be used to represent, for example, communication middleware. Usually, system software is combined with a device representing the hardware environment to form a general node.
 A device or system software can be assigned to other system software; e.g., to model different layers of software running on top of each other. System software can be assigned to artifacts, to model that these artifacts are deployed on that software. System software can realize other system software. A node can be composed of system software.
@@ -3832,22 +3981,11 @@ The name of system software should preferably be a noun referring to the type of
     
 
 
-    <!-- http://www.plminterop.org/archimate/TechnologyObject -->
-
-    <owl:Class rdf:about="http://www.plminterop.org/archimate/TechnologyObject">
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/PassiveStructureElement"/>
-        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/TechnologyPhysicalElement"/>
-        <rdfs:comment xml:lang="en">A technology object represents a passive element that is used or produced by technology behavior.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Technology objects represent the “physical” objects manipulated by the infrastructure of an enterprise. Technology objects are abstract elements; i.e., they are not instantiated in models but serve as the generic type of the things manipulated by the Technology Layer. This may include both artifacts (e.g., files) and physical material.
-Technology objects may be accessed by technology behavior (functions, processes, interactions, events, and services). A technology object may have association, specialization, aggregation, or composition relationships with other technology objects. A technology object may realize a data object or business object. It may be realized by an artifact or material (from the physical elements). The name of a technology object should preferably be a noun.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.plminterop.org/archimate/TechnologyPhysicalElement -->
 
     <owl:Class rdf:about="http://www.plminterop.org/archimate/TechnologyPhysicalElement">
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:comment xml:lang="en">The Technology Layer is typically used to model the technology architecture of the enterprise, defined by the TOGAF framework [4] as: “the structure and interaction of the platform services, and logical and physical technology components”.</rdfs:comment>
     </owl:Class>
     
@@ -3931,6 +4069,18 @@ A technology collaboration may be assigned to a technology interaction. A techno
 In a sense, a technology interface specifies a kind of contract that a component realizing this interface must fulfill. This may include, for example, parameters, protocols used, pre- and post- conditions, and data formats.
 A technology interface may be part of a node through composition (not shown in the standard notation), which means that these interfaces are provided by that node, and can serve other nodes. A technology interface can be assigned to a technology service, to expose that service to the environment.
 The name of a technology interface should preferably be a noun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/Technology_Object -->
+
+    <owl:Class rdf:about="http://www.plminterop.org/archimate/Technology_Object">
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/PassiveStructureElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/TechnologyPhysicalElement"/>
+        <rdfs:comment xml:lang="en">A technology object represents a passive element that is used or produced by technology behavior.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Technology objects represent the “physical” objects manipulated by the infrastructure of an enterprise. Technology objects are abstract elements; i.e., they are not instantiated in models but serve as the generic type of the things manipulated by the Technology Layer. This may include both artifacts (e.g., files) and physical material.
+Technology objects may be accessed by technology behavior (functions, processes, interactions, events, and services). A technology object may have association, specialization, aggregation, or composition relationships with other technology objects. A technology object may realize a data object or business object. It may be realized by an artifact or material (from the physical elements). The name of a technology object should preferably be a noun.</rdfs:comment>
     </owl:Class>
     
 
@@ -4047,6 +4197,7 @@ Viewpoints are designed for the purpose of communicating certain aspects and lay
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Accessor_Type3"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/ImplementationMigrationElement"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
+        <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
         <rdfs:subClassOf rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
         <rdfs:comment xml:lang="en">A work package represents a series of actions identified and designed to achieve specific results within specified time and resource constraints.</rdfs:comment>
@@ -4068,59 +4219,11 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
-    <!-- http://www.plminterop.org/archimate/Access -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Access">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Aggregation -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Aggregation">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Assessment -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Assessment">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Assignment -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Assignment">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Association -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Association">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Coherence -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Coherence">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aspect"/>
         <rdfs:comment>At the coherence abstraction level, multiple layers or multiple aspects are spanned. Extending the view to more than one layer or aspect enables the stakeholder to focus on architecture relationships like process-uses-system (multiple layer) or application-uses-object (multiple aspect). Typical stakeholders are operational managers responsible for a collection of IT services or business processes.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Composition -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Composition">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
     </owl:NamedIndividual>
     
 
@@ -4152,22 +4255,6 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
-    <!-- http://www.plminterop.org/archimate/Flow -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Flow">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Influence -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Influence">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Informing -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Informing">
@@ -4177,74 +4264,10 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
-    <!-- http://www.plminterop.org/archimate/Inverse_of_Influence -->
+    <!-- http://www.plminterop.org/archimate/Junction_002 -->
 
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_Realization -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_aggregation -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_assignment -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_composition -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_flow -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_serving -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_specialization -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_triggering -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Junction_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Junction"/>
     </owl:NamedIndividual>
     
 
@@ -4258,44 +4281,265 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
-    <!-- http://www.plminterop.org/archimate/Realization -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Realization">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Serving -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Serving">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Specialization -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Specialization">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Triggering -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/Triggering">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.plminterop.org/archimate/accessLink001 -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/accessLink001">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/Access"/>
         <SourceRelationshipForAccess rdf:resource="http://www.plminterop.org/archimate/facility001"/>
         <TargetRelationshipForAccess rdf:resource="http://www.plminterop.org/archimate/contract001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_actor_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_actor_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_collaboration_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_collaboration_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_003">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_event_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_event_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_004">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_function_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_function_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_005">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_interaction_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_interaction_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_006">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_interface-001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_interface_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_007">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_object_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_object_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_008">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_process_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_object_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_009">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_process_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_process_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_010">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_role_001"/>
+        <TargetRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_role_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_011">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
+        <SourceRelationshipForAggregation rdf:resource="http://www.plminterop.org/archimate/business_service_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_collaboration_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_collaboration_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_collaboration_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_collaboration_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_component_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_component_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_component_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_component_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_event_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_event_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_event_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_event_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_function_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_function_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_function_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_function_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_interaction_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_interaction_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_interaction_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_interaction_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_interface_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_interface_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_interface_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_interface_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_process_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_process_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_process_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_process_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_service_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_service_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/application_service_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/application_service_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/artifact_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/artifact_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/artifact_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/artifact_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
     </owl:NamedIndividual>
     
 
@@ -4317,11 +4561,99 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
+    <!-- http://www.plminterop.org/archimate/business_actor_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_actor_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_actor_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_actor_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_collaboration_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_collaboration_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_collaboration_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_collaboration_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.plminterop.org/archimate/business_event_001 -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_event_001">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
         <Access_relation_from_accessor_type2 rdf:resource="http://www.plminterop.org/archimate/business_object_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_event_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_event_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_function_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_function_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_function_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_function_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_interaction_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_interaction_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_interaction_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_interaction_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_interface-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_interface-001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_interface_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_interface_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
     </owl:NamedIndividual>
     
 
@@ -4334,10 +4666,244 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
+    <!-- http://www.plminterop.org/archimate/business_object_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_object_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_process_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_process_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_process_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_process_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_role_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_role_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_role_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_role_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_service_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_service_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/business_service_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/business_service_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/capability_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/capability_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/capability_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/capability_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/communication_network_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/communication_network_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/communication_network_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/communication_network_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/composition_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/composition_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Composition"/>
+        <SourceRelationshipForComposition rdf:resource="http://www.plminterop.org/archimate/application_collaboration_001"/>
+        <TargetRelationshipForComposition rdf:resource="http://www.plminterop.org/archimate/application_collaboration_002"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/constraint_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/constraint_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/constraint_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/constraint_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.plminterop.org/archimate/contract001 -->
 
     <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/contract001">
         <rdf:type rdf:resource="http://www.plminterop.org/archimate/Contract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/contract_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/contract_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Contract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/course_of_action_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/course_of_action_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/course_of_action_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/course_of_action_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/data_object_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/data_object_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/data_object_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/data_object_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/deliverable_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/deliverable_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/deliverable_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/deliverable_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/device_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/device_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/device_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/device_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/distribution_network_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/distribution_network_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/distribution_network_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/distribution_network_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/driver_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/driver_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/driver_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/driver_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/equipment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/equipment_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/equipmet_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/equipmet_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
     </owl:NamedIndividual>
     
 
@@ -4350,10 +4916,466 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
-    <!-- http://www.plminterop.org/archimate/inverse_of_access -->
+    <!-- http://www.plminterop.org/archimate/facility_002 -->
 
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/inverse_of_access">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/facility_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Facility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/gap_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/gap_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Gap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/gap_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/gap_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Gap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/goal_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/goal_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/goal_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/goal_01">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/grouping_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/grouping_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/grouping_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/grouping_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/implementation_event_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/implementation_event_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/implementation_event_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/implementation_event_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/junction_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/junction_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Junction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/location_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/location_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/location_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/location_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/material_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/material_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/material_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/material_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/meaning_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/meaning_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/meaning_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/meaning_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/node_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/node_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Node"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/node_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/node_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Node"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/outcome_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/outcome_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/outcome_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/outcome_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/path_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/path_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/path_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/path_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/plateau_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/plateau_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/plateau_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/plateau_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/principle_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/principle_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Principle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/principle_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/principle_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Principle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/product_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/product_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/product_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/product_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Product"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/representation_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/representation_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Representation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/representation_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/representation_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Representation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/requirement_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/requirement_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/requirement_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/requirement_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/resource_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/resource_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Resource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/resource_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/resource_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Resource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/stakeholder_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/stakeholder_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/stakeholder_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/stakeholder_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/strategy_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/strategy_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Strategy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/strategy_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/strategy_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Strategy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology-interaction_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology-interaction_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_collaboration_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_collaboration_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_collaboration_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_collaboration_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_event_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_event_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_event_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_event_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_function_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_function_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_function_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_function_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_interaction_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_interaction_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_interface_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_interface_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_interface_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_interface_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_object_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_object_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_object_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_object_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_process_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_process_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_process_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_process_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_service_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_service_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/technology_service_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/technology_service_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/value_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/value_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Value"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/value_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/value_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Value"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/work_package_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/work_package_002">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/workpackage_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/workpackage_001">
+        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
     </owl:NamedIndividual>
     
 
@@ -4366,41 +5388,6 @@ Conceptually, a work package is similar to a business process, in that it consis
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Access">
-        <rdfs:comment>Alternatively, an access relationship can be expressed by nesting the passive structure element inside the behavior or active structure element that accesses it; for example, nesting a data object inside an application component.
-The usual interpretation of an access relationship is that the whole of the target element is accessed by the source element. This means that if, for example, the same internal behavior element accesses two passive structure elements, both of these passive structure elements are needed. If two passive structure elements are, for example, alternative information sources and only one of them is needed by the internal behavior element, an or junction (see Section 5.4.3) can be used.</rdfs:comment>
-        <rdfs:comment>The access relationship indicates that a process, function, interaction, service, or event “does something” with a passive structure element; e.g., create a new object, read data from the object, write or modify the object data, or delete the object. The relationship can also be used to indicate that the object is just associated with the behavior; e.g., it models the information that comes with an event, or the information that is made available as part of a service. The arrow head, if present, indicates the direction of the flow of information. (The access relationship should not be confused with the UML dependency relationship, which uses a similar notation.)
-Note that, at the metamodel level, the direction of the relationship is always from an active structure element or a behavior element to a passive structure element, although the notation may point in the other direction to denote ‘read’ access, and in both directions to denote read- write access. Care must be taken when using access with derived relationships because the arrow on the relationship has no bearing to its directionality.</rdfs:comment>
-        <rdfs:comment>The access relationship models the ability of behavior and active structure elements to observe or act upon passive structure elements.</rdfs:comment>
-        <rdfs:label>Accesses</rdfs:label>
-        <rdfs:comment xml:lang="en">The access relationship represents a data dependency, denoted by a dashed line.
-The access relationship models the ability of behavior and active structure elements to observe or act upon passive structure elements.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Aggregation">
-        <rdfs:label>Aggregates</rdfs:label>
-        <rdfs:comment>An aggregation relationship is always allowed between two instances of the same element type.</rdfs:comment>
-        <rdfs:comment>The aggregation relationship indicates that an element consists of one or more other concepts.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Assessment">
-        <rdfs:comment xml:lang="en">An assessment represents the result of an analysis of the state of affairs of the enterprise with respect to some driver.</rdfs:comment>
-        <rdfs:comment>Punned element</rdfs:comment>
-        <rdfs:comment xml:lang="en">An assessment may reveal strengths, weaknesses, opportunities, or threats for some area of interest. These need to be addressed by adjusting existing goals or setting new ones, which may trigger changes to the Enterprise Architecture.
-Strengths and weaknesses are internal to the organization. Opportunities and threats are external to the organization. Weaknesses and threats can be considered as problems that need to be addressed by goals that “negate” the weaknesses and threats. Strengths and opportunities may be translated directly into goals. For example, the weakness “Customers complain about the helpdesk can be addressed by defining the goal “Improve helpdesk”. Or, the opportunity “Customers favor insurances that can be managed online” can be addressed by the goal “Introduce online portfolio management”. The name of an assessment should preferably be a noun or a (very) short sentence</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Assignment">
-        <rdfs:label>Assigned to</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Association">
-        <rdfs:label>Associated from</rdfs:label>
-        <rdfs:comment xml:lang="en">An association relationship is always allowed between two elements, or between a relationship and an element.
-The association relationship can be used when drawing a first high-level model where relationships are initially denoted in a generic way, and later refined to show more specific relationship types. In the metamodel pictures, some specific uses of the association relationship are explicitly shown.</rdfs:comment>
-        <rdfs:comment xml:lang="en">An association relationship models an unspecified relationship, or one that is not represented by another ArchiMate relationship.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Composition">
-        <rdfs:comment>A composition relationship is always allowed between two instances of the same element type.</rdfs:comment>
-        <rdfs:comment>The composition relationship indicates that an element consists of one or more other concepts.</rdfs:comment>
-        <rdfs:label>Composed of</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/DependencyRelationShip">
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dependency relationships, which model how elements are used to support other elements</rdfs:comment>
     </rdf:Description>
@@ -4408,89 +5395,11 @@ The association relationship can be used when drawing a first high-level model w
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dynamic relationships, which are used to model behavioral dependencies between
 elements</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Flow">
-        <rdfs:comment xml:lang="en">The flow relationship is used to model the flow of, for example, information, goods, or money between behavior elements. A flow relationship does not imply a causal relationship.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The flow relationship represents transfer from one element to another.</rdfs:comment>
-        <rdfs:label>Flows to</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Influence">
-        <rdfs:comment xml:lang="en">The influence relationship is the weakest type of dependency, used to model how motivation elements are influenced by other elements.
-The influence relationship models that an element affects the implementation or achievement of some motivation element.Attributes can be used to indicate the sign and/or strength of the influence. The choice of possible attribute values is left to the modeler; e.g., {++, +, 0, -, --} or [0..10]. By default, the influence relationship models a contribution with unspecified sign and strength.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The influence relationship is used to describe that some architectural element influences achievement or implementation of a motivation element, such as a goal or a principle. In general, a motivation element is realized to a certain degree. For example, consistently satisfying the principle ‘serve customers wherever they are’ will help to make the goal ‘increase market share’ come true. In other words, the principle contributes to the goal. In turn, to implement the principle ‘serve customers wherever they are’, it may be useful to impose a requirement of ‘24x7 web availability’ on some customer-facing application component. This can be modeled as a requirement that has an influence on that principle, and as an application component that in turn influences the requirement. Consistently modeling these dependencies with an influence relationship yields a traceable motivational path that explains why (in this example) a certain application component contributes to the corporate goal to ‘increase market share’. This kind of traceability supports measuring the results of Enterprise Architecture, and provides valuable information to, for example, change impact assessments.
-Additional to this ‘vertical’ use of contribution, from core elements upwards to requirements and goals, the relationship can also be used to model ‘horizontal’ contributions between motivation elements. The influence relationship in that case describes that some motivation element may influence (the achievement or implementation of) another motivation element. In general, a motivation element is achieved to a certain degree. An influence by some other element may affect this degree, depending on the degree in which this other element is satisfied itself. For example, the degree in which the goal to increase customer satisfaction is realized may be represented by the percentage of satisfied customers that participate in a market interview. This percentage may be influenced by, for example, the goal to improve the reputation of the company; i.e., a higher degree of improvement results in a higher increase in customer satisfaction. On the other hand, the goal to lay off employees may influence the company reputation negatively; i.e., more lay-offs could result in a lower increase (or even decrease) in the company reputation. And thus (indirectly), the goal to increase customer satisfaction may also be influenced negatively.
-The realization relationship should be used to represent relationships that are critical to the existence or realization of the target, while the influence relationship should be used to represent relationships that are not critical to the target object’s existence or realization. For example, a business actor representing a construction crew might realize the goal of constructing a building, and a requirement to add additional skilled construction workers to an already adequate crew might influence the goal of constructing the building, but also realize an additional goal of opening the building by a particular date. Moreover, an influence relationship can be used to model either:
-The fact that an element positively contributes to the achievement or implementation of some motivation element, or
-􏰀 The fact that an element negatively influences – i.e., prevents or counteracts – such achievement
-Attributes can be used to indicate the sign and/or strength of the influence. The choice of possible attribute values is left to the modeler; e.g., {++, +, 0, -, --} or [0..10]. By default, the influence relationship models a contribution with unspecified sign and strength.</rdfs:comment>
-        <rdfs:label>Influences</rdfs:label>
-        <rdfs:comment>The influence relationship models that an element affects the implementation or achievement of some motivation element.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
-        <rdfs:label>Influenced by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
-        <rdfs:label>Realized by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
-        <rdfs:label>Aggregated by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
-        <rdfs:label>Assigned from</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
-        <rdfs:label>Composed by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
-        <rdfs:label>Flows from</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
-        <rdfs:label>Served by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
-        <rdfs:label>Specializes</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
-        <rdfs:label>Triggered by</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/OtherRelationship">
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Other relationships, which do not fall into one of the above categories</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Realization">
-        <rdfs:label>Realizes</rdfs:label>
-        <rdfs:comment>The realization relationship indicates that more abstract entities (“what” or “logical”) are realized by means of more tangible entities (“how” or “physical”). The realization relationship is used to model run-time realization; for example, that a business process realizes a business service, and that a data object realizes a business object, an artifact realizes an application component, or a core element realizes a motivation element.</rdfs:comment>
-        <rdfs:comment>The usual interpretation of a realization relationship is that the whole or part of the source element realizes the whole of the target element. This means that if, for example, two internal behavior elements have a realization relationship to the same service, either of them can realize the complete service. If both internal behavior elements are needed to realize, the grouping element or a junction (see Section 5.4.3) can be used. For weaker types of contribution to the realization of an element, the influence relationship (see Section 5.2.3) should be used.</rdfs:comment>
-        <rdfs:comment>Realization Relationship
-The realization relationship indicates that an entity plays a critical role in the creation, achievement, sustenance, or operation of a more abstract entity.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Serving">
-        <rdfs:comment xml:lang="en">The serving relationship represents a control dependency, denoted by a solid line.
-The serving relationship models that an element provides its functionality to another element.</rdfs:comment>
-        <rdfs:comment>The serving relationship describes how the services or interfaces offered by a behavior or active structure element serve entities in their environment. This relationship is applied for both the behavior aspect and the active structure aspect.
-Compared to the earlier versions of this standard, the name of this relationship has been changed from ‘used by’ to ‘serving’, to better reflect its direction with an active verb: a service serves a user. The meaning of the relationship has not been altered. The ‘used by’ designation is still allowed but deprecated, and will be removed in a future version of the standard.</rdfs:comment>
-        <rdfs:label>Serves</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Specialization">
-        <rdfs:comment xml:lang="en">The specialization relationship indicates that an element is a particular kind of another element.</rdfs:comment>
-        <rdfs:label>Specializion of</rdfs:label>
-        <rdfs:comment xml:lang="en">The specialization relationship has been inspired by the generalization relationship in UML class diagrams, but is applicable to specialize a wider range of concepts. The specialization relationship can relate any instance of a concept with another instance of the same concept.
-A specialization relationship is always allowed between two instances of the same element.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.plminterop.org/archimate/StructuralRelationship">
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Structural relationships, which model the static construction or composition of concepts of the same or different types</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/Triggering">
-        <rdfs:comment xml:lang="en">The triggering relationship describes a temporal or causal relationship between elements.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The triggering relationship is used to model the temporal or causal precedence of behavior elements in a process. The usual interpretation of a triggering relationship is that the source element should be completed before the target element can start, although weaker interpretations are also permitted. Note that this does not necessarily represent that one behavior element actively starts another; a traffic light turning green also triggers the cars to go through the intersection.</rdfs:comment>
-        <rdfs:label>Triggers</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_access">
-        <rdfs:label>Accessed by</rdfs:label>
-        <rdfs:comment>Equipment comprises all active processing elements that carry out physical processes in which materials (which are a special kind of technology object) are used or transformed. Equipment is a specialization of the node element from the Technology Layer. Therefore, it is possible to model nodes that are formed by a combination of IT infrastructure (devices, system software) and physical infrastructure (equipment); e.g., an MRI scanner at a hospital, a production plant with its control systems, etc.
-Material can be accessed (e.g., created, used, stored, moved, or transformed) by equipment. Equipment can serve other equipment, and also other active structure elements such as business roles and actors, and facilities can be assigned to equipment. A piece of equipment can be composed of other pieces of equipment. Equipment can be assigned to (i.e., installed and used in or on) a facility and can be aggregated in a location.
-The name of a piece of equipment should preferably be a noun.</rdfs:comment>
-        <rdfs:comment>The equipment element is the main active structure element within the physical elements. This element is used to model structural entities in this layer. It is used to model any physical machinery, tools, instruments, or implements. It strictly models the structural aspect of a system; its behavior is modeled by an explicit relationship to the behavior elements.
-The inter-relationships of physical elements are mainly formed by the logistics infrastructure. The path element from the Technology Layer models the relation between two or more nodes, through which these nodes can exchange information or material. The physical realization of a path is modeled with a distribution network; i.e., a physical connection between two or more pieces of equipment (or other physical networks). This can be used to model, for example, rail or road networks, the water supply, power grid, or gas network.</rdfs:comment>
-        <rdfs:comment>Equipment represents one or more physical machines, tools, or instruments that can create, use, store, move, or transform materials.</rdfs:comment>
     </rdf:Description>
     
 
