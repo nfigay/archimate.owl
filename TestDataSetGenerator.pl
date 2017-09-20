@@ -21,14 +21,14 @@ for my $i (0.. $#ArchiMateModelingRelations) {
    for my $j (0.. $#ArchiMateModelingEntities) {
 print DATA   
    
-"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_AB",$j, "-->",
+"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_AB",$j, "_", $ArchiMateModelingEntities[$j],"_001_002", "-->",
 "\n","\n",
-'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_AB',$j,'">',"\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_AB',$j,"_",$ArchiMateModelingEntities[$j],"_001_002",'">',"\n",
 '      <rdf:type rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'"/>',
 "\n",
- "      <SourceRelationshipFor",  $ArchiMateModelingEntities[$j], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_001"/>',
+ "      <SourceRelationshipFor",  $ArchiMateModelingRelations[$i], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_G001"/>',
  "\n",
-'      <TargetRelationshipFor', Composition,'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_002"/>',
+'      <TargetRelationshipFor', $ArchiMateModelingRelations[$i],'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_G002"/>',
 "\n",
 '</owl:NamedIndividual>',
 "\n","\n","\n"
@@ -40,14 +40,14 @@ for my $i (0.. $#ArchiMateModelingRelations) {
 print DATA   
    
 "<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_BC",$j,
-"-->",
+"_", $ArchiMateModelingEntities[$j],"_002_003","-->",
 "\n","\n",
-'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_BC',$j,'">',"\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_BC',$j,"_",$ArchiMateModelingEntities[$j],"_002_003",'">',"\n",
 '      <rdf:type rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'"/>',
 "\n",
- "      <SourceRelationshipFor",  $ArchiMateModelingEntities[$j], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_002"/>',
+ "      <SourceRelationshipFor",  $ArchiMateModelingRelations[$i], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_G002"/>',
  "\n",
-'      <TargetRelationshipFor', Composition,'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_003"/>',
+'      <TargetRelationshipFor', $ArchiMateModelingRelations[$i],'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_G003"/>',
 "\n",
 '</owl:NamedIndividual>',
 "\n","\n","\n"
@@ -58,14 +58,14 @@ for my $i (0.. $#ArchiMateModelingRelations) {
    for my $j (0.. $#ArchiMateModelingEntities) {
 print DATA   
    
-"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_AA",$j, "-->",
+"<!-- http://www.plminterop.org/archimate/", $ArchiMateModelingRelations[$i],"_AA",$j, "_", $ArchiMateModelingEntities[$j],"_001_001","-->",
 "\n","\n",
-'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_AA',$j,'">',"\n",
+'<owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'_AA',$j,"_",$ArchiMateModelingEntities[$j],"_001_001",'">',"\n",
 '      <rdf:type rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingRelations[$i],'"/>',
 "\n",
- "      <SourceRelationshipFor",  $ArchiMateModelingEntities[$j], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_001"/>',
+ "      <SourceRelationshipFor",  $ArchiMateModelingRelations[$i], '  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_G001"/>',
  "\n",
-'      <TargetRelationshipFor', Composition,'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_001"/>',
+'      <TargetRelationshipFor', $ArchiMateModelingRelations[$i],'  rdf:resource="http://www.plminterop.org/archimate/',$ArchiMateModelingEntities[$j],'_G001"/>',
 "\n",
 '</owl:NamedIndividual>',
 "\n","\n","\n"

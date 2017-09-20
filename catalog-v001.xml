@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.opengroup.org/archimate/interchange/ArchiMate_V0.06.owl" uri="file:/Users/nicolasfigay/Desktop/A%20trier/ArchiMate_V0.06.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1505832729208" name="http://www.plminterop.org/archimate/" uri="ArchiMate%203.0.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1505889399160" name="http://www.plminterop.org/archimate/" uri="ArchiMate%203.0.owl"/>
     </group>
 </catalog>
