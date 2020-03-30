@@ -67,23 +67,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/AccessR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AccessR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/inverse_of_access"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAccess"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAccess"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Access_relation_from_accessor_type1 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_accessor_type1">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/access_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Accessor_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
@@ -100,7 +87,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Access_relation_from_accessor_type2 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_accessor_type2">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/access_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Accessor_Type2"/>
         <rdfs:range>
             <owl:Class>
@@ -120,7 +107,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Access_relation_from_accessor_type3 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_accessor_type3">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/access_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Accessor_Type3"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -132,7 +119,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Access_relation_from_capability -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_capability">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/access_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
     </owl:ObjectProperty>
@@ -142,7 +129,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Access_relation_from_course_of_action -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_course_of_action">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/access_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
     </owl:ObjectProperty>
@@ -152,7 +139,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Access_relation_from_resource -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Access_relation_from_resource">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AccessR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/access_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
     </owl:ObjectProperty>
@@ -162,7 +149,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_applicationComponent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_applicationComponent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
@@ -175,7 +162,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_applicationEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_applicationEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
     </owl:ObjectProperty>
@@ -185,7 +172,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_applicationFunctionOrProcessOrInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_applicationFunctionOrProcessOrInteraction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
@@ -200,7 +187,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_applicationInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_applicationInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
     </owl:ObjectProperty>
@@ -210,7 +197,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_applicationService -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_applicationService">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -221,7 +208,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_artifact -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_artifact">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -232,7 +219,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_assessment -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_assessment">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -243,7 +230,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessActor -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessActor">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
@@ -255,7 +242,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessCollaboration -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessCollaboration">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
@@ -269,7 +256,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -280,7 +267,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -291,7 +278,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessObjectorContract -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessObjectorContract">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Contract"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
@@ -304,7 +291,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessProcessOrFunctionOrInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessProcessOrFunctionOrInteraction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
@@ -319,7 +306,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessRole -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessRole">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
@@ -331,7 +318,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_businessService -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_businessService">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -342,7 +329,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_capability -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_capability">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -353,7 +340,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_communicationNetwork -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_communicationNetwork">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
@@ -371,7 +358,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_courseOfAction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_courseOfAction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -382,7 +369,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_dataObject -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_dataObject">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -393,7 +380,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_deliverable -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_deliverable">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -404,7 +391,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_distributionNetwork -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_distributionNetwork">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
@@ -422,7 +409,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_driver -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_driver">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Driver"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Driver"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -433,7 +420,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_goal -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_goal">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Goal"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -444,7 +431,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_grouping -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_grouping">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingRelation"/>
@@ -455,7 +442,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_implementationEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_implementationEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
@@ -466,7 +453,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_location -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_location">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Location"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
     </owl:ObjectProperty>
@@ -476,7 +463,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_material -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_material">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Material"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Material"/>
@@ -487,7 +474,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_meaning -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_meaning">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
@@ -498,7 +485,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_nodeOrDeviceOrSystemSoftwareOrTechnologyCollaborationOrEquipmentOrFacility -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_nodeOrDeviceOrSystemSoftwareOrTechnologyCollaborationOrEquipmentOrFacility">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Device"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Facility"/>
@@ -519,7 +506,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_outcome -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_outcome">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
@@ -530,7 +517,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_path -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_path">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Path"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
@@ -548,7 +535,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_plateau -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_plateau">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ApplicationElement"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/BusinessElement"/>
@@ -565,7 +552,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_principle -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_principle">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Principle"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
@@ -576,7 +563,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_product -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_product">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Product"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
@@ -596,7 +583,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_representation -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_representation">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Representation"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Representation"/>
@@ -607,7 +594,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_requirementOrConstraint -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_requirementOrConstraint">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
@@ -620,7 +607,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_resource -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_resource">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Resource"/>
@@ -631,7 +618,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_stakeholder -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_stakeholder">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
@@ -642,7 +629,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_technologyEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_technologyEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
@@ -653,7 +640,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_technologyFunctionOrProcessOrInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_technologyFunctionOrProcessOrInteraction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
@@ -668,7 +655,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_technologyInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_technologyInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
@@ -679,7 +666,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_technologyService -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_technologyService">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
@@ -690,7 +677,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_value -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_value">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Value"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Value"/>
@@ -701,7 +688,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Aggregated_by_workPackage -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Aggregated_by_workPackage">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AggregationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
@@ -709,55 +696,38 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/AggregationR -->
+    <!-- http://www.plminterop.org/archimate/AssignementFrom -->
 
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AggregationR">
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AssignementFrom">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_aggregation"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AggregationR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AggregationR"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AggregationR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/CompositionR"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/CompositionR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AggregationR"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAggregation"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAggregation"/>
-        </owl:propertyChainAxiom>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/AssignmentTo"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.plminterop.org/archimate/AssignmentR -->
+    <!-- http://www.plminterop.org/archimate/AssignmentTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AssignmentR">
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AssignmentTo">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_assignment"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AggregationR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentR"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentTo"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentTo"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AggregationR"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentTo"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/aggregation_"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentR"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentTo"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/composition_"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/CompositionR"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/aggregation_"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentTo"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/CompositionR"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentR"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/composition_"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/AssignmentTo"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAssignment"/>
@@ -770,38 +740,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Assignment_relation_from_resource -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Assignment_relation_from_resource">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AssignmentR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/AssignmentTo"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Junction"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/AssociationR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/AssociationR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_association"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAssociation"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAssociation"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/CompositionR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/CompositionR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_composition"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForComposition"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForComposition"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -818,23 +760,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/FlowR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/FlowR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_flow"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForFlow"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForFlow"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Flow_relation_from_source_type1 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_source_type1">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/FlowR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/flow_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Source_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
@@ -848,7 +777,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Flow_relation_from_source_type2 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_source_type2">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/FlowR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/flow_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Source_Type2"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
@@ -891,7 +820,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Flow_relation_from_source_type3 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Flow_relation_from_source_type3">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/FlowR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/flow_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Source_Type3"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
@@ -901,23 +830,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/InfluenceR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/InfluenceR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/Inverse_of_Influence"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForInfluence"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForInfluence"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Influence_relation_from_Stakeholder -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_Stakeholder">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/InfluenceR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/influence_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
@@ -929,7 +845,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Influence_relation_from_influencer_type1 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_influencer_type1">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/InfluenceR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/influence_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Influencer_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
@@ -950,7 +866,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Influence_relation_from_influencer_type2 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Influence_relation_from_influencer_type2">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/InfluenceR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/influence_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Influencer_Type2"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
@@ -971,6 +887,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_Influence">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/influence_"/>
     </owl:ObjectProperty>
     
 
@@ -979,7 +896,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_Realization">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/realization_"/>
     </owl:ObjectProperty>
     
 
@@ -988,14 +905,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_aggregation">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/Inverse_of_assignment -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_assignment">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/aggregation_"/>
     </owl:ObjectProperty>
     
 
@@ -1004,6 +914,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_association">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/association_"/>
     </owl:ObjectProperty>
     
 
@@ -1012,6 +923,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_composition">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/composition_"/>
     </owl:ObjectProperty>
     
 
@@ -1020,6 +932,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_flow">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/flow_"/>
     </owl:ObjectProperty>
     
 
@@ -1028,7 +941,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_serving">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/ServingR"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/serving_"/>
     </owl:ObjectProperty>
     
 
@@ -1037,7 +950,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_specialization">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
     </owl:ObjectProperty>
     
 
@@ -1046,7 +959,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Inverse_of_triggering">
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
-        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/TriggeringR"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/triggering_"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
@@ -1068,22 +981,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/RealizationR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/RealizationR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForRealization"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForRealization"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Realization_relation_from_applicationInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_applicationInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/realization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
@@ -1096,7 +997,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Realization_relation_from_product -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_product">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/realization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Product"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
@@ -1139,7 +1040,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Realization_relation_from_realization_type1 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_realization_type1">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/realization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Realization_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
@@ -1155,7 +1056,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Realization_relation_from_realization_type2 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Realization_relation_from_realization_type2">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/RealizationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/realization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Realization_Type2"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
@@ -1183,22 +1084,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/ServingR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/ServingR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForServing"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForServing"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Serving_relation_from_courseOfAction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_courseOfAction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/ServingR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/serving_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1210,7 +1099,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Serving_relation_from_serving_type1 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_serving_type1">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/ServingR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/serving_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Serving_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
@@ -1250,7 +1139,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Serving_relation_from_serving_type2 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_serving_type2">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/ServingR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/serving_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
@@ -1264,7 +1153,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Serving_relation_from_serving_type3 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Serving_relation_from_serving_type3">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/ServingR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/serving_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Junction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
@@ -1335,6 +1224,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SourceRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAssignment"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Assignment"/>
+        <rdfs:label>Assignee</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1425,24 +1315,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/SpecializationR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/SpecializationR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForSpecialization"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForSpecialization"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationCollaboration -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationCollaboration">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1453,7 +1329,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationComponent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationComponent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Component"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1464,7 +1340,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1475,7 +1351,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationFunction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationFunction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Function"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1486,7 +1362,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationInteraction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interaction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1497,7 +1373,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1508,7 +1384,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationProcess -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationProcess">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1519,7 +1395,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_applicationService -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_applicationService">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1530,7 +1406,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_artifact -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_artifact">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Artifact"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1541,7 +1417,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_assessment -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_assessment">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Assessment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1552,7 +1428,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessActor -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessActor">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Actor"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1563,7 +1439,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessCollaboration -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessCollaboration">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1574,7 +1450,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
@@ -1585,7 +1461,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessFunction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessFunction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Function"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1596,7 +1472,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessInteraction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interaction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1607,7 +1483,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1618,7 +1494,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessObjectOrContract -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessObjectOrContract">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Contract"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Object"/>
@@ -1631,7 +1507,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessProcess -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessProcess">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Process"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1642,7 +1518,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessRole -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessRole">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Role"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1653,7 +1529,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_businessService -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_businessService">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Business_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1664,7 +1540,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_capability -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_capability">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Capability"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1675,7 +1551,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_communicationNetwork -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_communicationNetwork">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Communication_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1686,7 +1562,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_courseOfAction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_courseOfAction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Course_of_Action"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1697,7 +1573,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_dataObject -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_dataObject">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Data_Object"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1708,7 +1584,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_deliverable -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_deliverable">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Deliverable"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1719,7 +1595,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_device -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_device">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Device"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Device"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1730,7 +1606,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_distributionNetwork -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_distributionNetwork">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Distribution_Network"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1741,7 +1617,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_driver -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_driver">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Driver"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Driver"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1752,7 +1628,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_equipment -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_equipment">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Equipment"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1763,7 +1639,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_facility -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_facility">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Facility"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Facility"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1774,7 +1650,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_gap -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_gap">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Gap"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Gap"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1785,7 +1661,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_goal -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_goal">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Goal"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Goal"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
@@ -1796,7 +1672,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_grouping -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_grouping">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
     </owl:ObjectProperty>
@@ -1806,7 +1682,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_implementationEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_implementationEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
@@ -1817,7 +1693,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_location -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_location">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Location"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Location"/>
@@ -1828,7 +1704,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_material -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_material">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Material"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Material"/>
@@ -1839,7 +1715,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_meaning -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_meaning">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Meaning"/>
@@ -1850,7 +1726,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_node -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_node">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Node"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Node"/>
@@ -1861,7 +1737,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_outcome -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_outcome">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Outcome"/>
@@ -1872,7 +1748,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_path -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_path">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Path"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Path"/>
@@ -1883,7 +1759,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_plateau -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_plateau">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
@@ -1894,7 +1770,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_principle -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_principle">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Principle"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Principle"/>
@@ -1905,7 +1781,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_product -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_product">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Product"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Product"/>
@@ -1916,7 +1792,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_representation -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_representation">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Representation"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Representation"/>
@@ -1927,7 +1803,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_requirementOrConstraint -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_requirementOrConstraint">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Requirement"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Constraint"/>
@@ -1939,7 +1815,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_resource -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_resource">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Resource"/>
@@ -1950,7 +1826,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_stakeholder -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_stakeholder">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Stakeholder"/>
@@ -1961,7 +1837,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyCollaboration -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyCollaboration">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Collaboration"/>
@@ -1972,7 +1848,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyEvent -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Event"/>
@@ -1983,7 +1859,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyFunction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyFunction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Function"/>
@@ -1994,7 +1870,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyInteraction">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interaction"/>
@@ -2005,7 +1881,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyInterface -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyInterface">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Interface"/>
@@ -2016,7 +1892,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyProcess -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyProcess">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Process"/>
@@ -2027,7 +1903,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_technologyService -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_technologyService">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Technology_Service"/>
@@ -2038,7 +1914,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_value -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_value">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Value"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Value"/>
@@ -2049,7 +1925,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Specialization_relation_from_workPackage -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Specialization_relation_from_workPackage">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/SpecializationR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/specialization_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
@@ -2097,6 +1973,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/TargetRelationship"/>
         <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/inverse_of_TargetRelationshipForAssignment"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Assignment"/>
+        <rdfs:label>Assigned</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2181,27 +2058,10 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     
 
 
-    <!-- http://www.plminterop.org/archimate/TriggeringR -->
-
-    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/TriggeringR">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
-        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForTriggering"/>
-            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForTriggering"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type1 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type1">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/TriggeringR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/triggering_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type1"/>
     </owl:ObjectProperty>
@@ -2211,7 +2071,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type2 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type2">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/TriggeringR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/triggering_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
     </owl:ObjectProperty>
@@ -2221,7 +2081,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type3 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type3">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/TriggeringR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/triggering_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type3"/>
     </owl:ObjectProperty>
@@ -2231,7 +2091,7 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type4 -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/Triggering_relation_from_triggering_type4">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/TriggeringR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/triggering_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Triggering_Type4"/>
     </owl:ObjectProperty>
@@ -2244,6 +2104,81 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
         <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
         <rdfs:comment xml:lang="en">Compared to the earlier versions of this standard, the name of this relationship has been changed from ‘used by’ to ‘serving’, to better reflect its direction with an active verb: a service serves a user. The meaning of the relationship has not been altered. The ‘used by’ designation is still allowed but deprecated, and will be removed in a future version of the standard.</rdfs:comment>
         <rdfs:label>Is used</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/access_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/access_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
+        <owl:inverseOf rdf:resource="http://www.plminterop.org/archimate/inverse_of_access"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAccess"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAccess"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/aggregation_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/aggregation_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/aggregation_"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/aggregation_"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/aggregation_"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/composition_"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/composition_"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/aggregation_"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAggregation"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAggregation"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/association_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/association_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/ArchiMateModelingEntity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForAssociation"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForAssociation"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/composition_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/composition_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForComposition"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForComposition"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/flow_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/flow_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForFlow"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForFlow"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -2261,6 +2196,18 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/hasPurpose">
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/ArchiMateViewpoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/influence_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/influence_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForInfluence"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForInfluence"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -2452,10 +2399,65 @@ It should allow to define measures for the qualitative properties.</rdfs:comment
     <!-- http://www.plminterop.org/archimate/isResourceComposedOf -->
 
     <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/isResourceComposedOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/CompositionR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/composition_"/>
         <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Resource"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Grouping"/>
         <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/realization_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/realization_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/StructuralRelationship"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForRealization"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForRealization"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/serving_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/serving_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DependencyRelationShip"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForServing"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForServing"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/specialization_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/specialization_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/OtherRelationship"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Application_Process"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForSpecialization"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForSpecialization"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plminterop.org/archimate/triggering_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.plminterop.org/archimate/triggering_">
+        <rdfs:subPropertyOf rdf:resource="http://www.plminterop.org/archimate/DynamicRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.plminterop.org/archimate/Triggering_Type2"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Implementation_Event"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Plateau"/>
+        <rdfs:range rdf:resource="http://www.plminterop.org/archimate/Work_Package"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/inverse_of_SourceRelationshipForTriggering"/>
+            <rdf:Description rdf:about="http://www.plminterop.org/archimate/TargetRelationshipForTriggering"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -4273,112 +4275,6 @@ Conceptually, a work package is similar to a business process, in that it consis
     
 
 
-    <!-- http://www.plminterop.org/archimate/accessLink001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/accessLink001">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Access"/>
-        <SourceRelationshipForAccess rdf:resource="http://www.plminterop.org/archimate/aggregation_001"/>
-        <TargetRelationshipForAccess rdf:resource="http://www.plminterop.org/archimate/aggregation_001"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_001">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_002 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_002">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_003 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_003">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_004 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_004">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_005 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_005">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_006 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_006">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_007 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_007">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_008 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_008">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_009 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_009">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_010 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_010">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/aggregation_011 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/aggregation_011">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Aggregation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.plminterop.org/archimate/composition_001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.plminterop.org/archimate/composition_001">
-        <rdf:type rdf:resource="http://www.plminterop.org/archimate/Composition"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -4419,10 +4315,9 @@ elements</rdfs:comment>
             <rdf:Description rdf:about="http://www.plminterop.org/archimate/PassiveStructureElement"/>
         </owl:members>
     </rdf:Description>
-    
-    
-    
 </rdf:RDF>
+
+
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 

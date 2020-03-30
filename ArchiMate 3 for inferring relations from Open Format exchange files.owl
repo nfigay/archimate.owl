@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.plm-interop.net/archimate/"
+     xml:base="http://www.plm-interop.net/archimate/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:archimate="http://www.plm-interop.net/archimate/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.plm-interop.net/archimate/">
+        <owl:versionIRI rdf:resource="http://www.plm-interop.net/archimate/3.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/AccessR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/AccessR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForAccess"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAccess"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/AggregationR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/AggregationR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForAggregation"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAggregation"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/AssignmentR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/AssignmentR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForAssignment"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAssignment"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/AssociationR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/AssociationR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForAssociation"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAssociation"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/CompositionR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/CompositionR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForComposition"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForComposition"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/FlowR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/FlowR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForFlow"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForFlow"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/InfluenceR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/InfluenceR"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/RealizationR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/RealizationR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForRealization"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForRealization"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ServingR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/ServingR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForServing"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForServing"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForAccess -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForAccess"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForAggregation -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForAggregation"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForAssignment -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForAssignment"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForAssociation -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForAssociation"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForComposition"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForFlow"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForInfluence -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForInfluence"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForRealization -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForRealization"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForServing -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForServing"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForSpecialization -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForSpecialization"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SourceRelationshipForTriggering -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SourceRelationshipForTriggering"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SpecializationR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/SpecializationR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForSpecialization"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForSpecialization"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForAccess -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAccess"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForAggregation -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAggregation"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForAssignment -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAssignment"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForAssociation -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForAssociation"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForComposition"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForFlow"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForInfluence -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForInfluence"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForRealization -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForRealization"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForServing -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForServing"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForSpecialization -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForSpecialization"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TargetRelationshipForTriggering -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForTriggering"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TriggeringR -->
+
+    <owl:ObjectProperty rdf:about="http://www.plm-interop.net/archimate/TriggeringR">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.plm-interop.net/archimate/SourceRelationshipForTriggering"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.plm-interop.net/archimate/TargetRelationshipForTriggering"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Access -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Access"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Aggregation -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Aggregation"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/AndJunction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/AndJunction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationCollaboration -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationCollaboration"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationComponent -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationComponent"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationEvent -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationEvent"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationFunction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationFunction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationInteraction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationInteraction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationInterface -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationInterface"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationProcess -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationProcess"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ApplicationService -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ApplicationService"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Artifact -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Artifact"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Assessment -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Assessment"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Assignment -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Assignment"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Association -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Association"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessActor -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessActor"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessCollaboration -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessCollaboration"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessEvent -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessEvent"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessFunction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessFunction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessInteraction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessInteraction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessInterface -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessInterface"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessObject -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessObject"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessProcess -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessProcess"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessRole -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessRole"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/BusinessService -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/BusinessService"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Capability -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Capability"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/CommunicationNetwork -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/CommunicationNetwork"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Composition -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Composition"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Constraint -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Constraint"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Contract -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Contract"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/CourseOfAction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/CourseOfAction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/DataObject -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/DataObject"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Deliverable -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Deliverable"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Device -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Device"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/DistributionNetwork -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/DistributionNetwork"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Driver -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Driver"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Equipment -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Equipment"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Facility -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Facility"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Flow -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Flow"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Gap -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Gap"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Goal -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Goal"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Grouping -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Grouping"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/ImplementationEvent -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/ImplementationEvent"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Influence -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Influence"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Location -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Location"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Material -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Material"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Meaning -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Meaning"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Node -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Node"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/OrJunction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/OrJunction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Outcome -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Outcome"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Path -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Path"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Plateau -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Plateau"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Principle -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Principle"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Product -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Product"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Realization -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Realization"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Representation -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Representation"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Requirement -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Requirement"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Resource -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Resource"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Serving -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Serving"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Specialization -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Specialization"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Stakeholder -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Stakeholder"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/SystemSoftware -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/SystemSoftware"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyCollaboration -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyCollaboration"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyEvent -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyEvent"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyFunction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyFunction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyInteraction -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyInteraction"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyInterface -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyInterface"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyProcess -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyProcess"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/TechnologyService -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/TechnologyService"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Triggering -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Triggering"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/Value -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/Value"/>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/WorkPackage -->
+
+    <owl:Class rdf:about="http://www.plm-interop.net/archimate/WorkPackage"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#NameIndividual -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#NameIndividual"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
