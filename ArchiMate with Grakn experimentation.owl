@@ -6,7 +6,9 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.plm-interop.net/archimate/grakn.ai"/>
+    <owl:Ontology rdf:about="http://www.plm-interop.net/archimate/grakn.ai">
+        <rdfs:comment>This ontology aims at experimenting deriving ontology from ArchiMate in OWL, but also ability to support alternative representations such as grakn.ai</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -18554,6 +18556,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.plm-interop.net/archimate/grakn.ai#Node_001">
         <rdf:type rdf:resource="http://www.plm-interop.net/archimate/grakn.ai#Node"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.plm-interop.net/archimate/grakn.ai#OWLNamedIndividual_26212067_7737_4c42_932d_5a5b2d35310c -->
+
+    <owl:NamedIndividual rdf:about="http://www.plm-interop.net/archimate/grakn.ai#OWLNamedIndividual_26212067_7737_4c42_932d_5a5b2d35310c">
+        <rdf:type rdf:resource="http://www.plm-interop.net/archimate/grakn.ai#Goal"/>
+        <rdfs:label xml:lang="en">Goal_002</rdfs:label>
     </owl:NamedIndividual>
     
 
